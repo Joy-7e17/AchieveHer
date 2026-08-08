@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AchieveHer — Learner Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <header>
+    <h1>AchieveHer 🎀</h1>
+    <p>learner profile — demo</p>
+  </header>
+
+  <div class="card">
+    <div class="card-top">
+      <div class="avatar">J</div>
+      <div class="name-block">
+        <h2>Juliet</h2>
+        <div class="skill-path">UI/UX Designer</div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="goal">
+        <span>Career Goal</span>
+        Land a junior product design role at a mission-driven startup within 12 months.
+      </div>
+
+      <span class="section-label">Badges</span>
+      <div class="badges">
+        <div class="badge"><span class="medal"></span> Consistency Star</div>
+        <div class="badge"><span class="medal"></span> First Pitch Done</div>
+        <div class="badge"><span class="medal"></span> Team Player</div>
+      </div>
+
+      <span class="section-label">Portfolio</span>
+      <div class="portfolio">
+        <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="#" target="_blank" rel="noopener">Behance ↗</a>
+      </div>
+
+      <button class="growth-toggle" id="growthBtn">View Growth History</button>
+
+      <div class="growth-panel" id="growthPanel">
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Mentor Pres.</th>
+              <th>Sales Pitch</th>
+              <th>Reading</th>
+              <th>Team Proj.</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>May</td>
+              <td><span class="dot missed"></span></td>
+              <td><span class="dot done"></span></td>
+              <td><span class="dot done"></span></td>
+              <td><span class="dot missed"></span></td>
+              <td>5.0</td>
+            </tr>
+            <tr>
+              <td>June</td>
+              <td><span class="dot missed"></span></td>
+              <td><span class="dot done"></span></td>
+              <td><span class="dot done"></span></td>
+              <td><span class="dot done"></span></td>
+              <td>7.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">tap "View Growth History" — it's the admin-only reflection view</p>
+
+  <script>
+    const btn = document.getElementById('growthBtn');
+    const panel = document.getElementById('growthPanel');
+    btn.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('open');
+      btn.textContent = isOpen ? 'Hide Growth History' : 'View Growth History';
+    });
+  </script>
+
+</body>
+</html>
+
