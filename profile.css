@@ -1,0 +1,240 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f0e6f7;
+  color: #4a2840;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #b52a8c;
+}
+
+header p {
+  color: #9c7393;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* --- Profile Card --- */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(74, 40, 64, 0.1);
+  overflow: hidden;
+}
+
+.card-top {
+  background: linear-gradient(135deg, #ffd3ec, #f0e6f7);
+  padding: 1.8rem 1.5rem 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #b52a8c;
+  color: #fff;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px #ffffff, 0 4px 10px rgba(181,42,140,0.3);
+  flex-shrink: 0;
+}
+
+.name-block h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.35rem;
+  color: #4a2840;
+}
+
+.skill-path {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a03c78;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.15rem;
+}
+
+.card-body {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.goal {
+  font-size: 0.95rem;
+  color: #6b4560;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.goal span {
+  display: block;
+  font-weight: 700;
+  color: #b52a8c;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.section-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #b52a8c;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* --- Badges --- */
+.badges {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.3rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fdf1f9;
+  border: 1px solid #ffd3ec;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a03c78;
+}
+
+.badge .medal {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffe3f3, #d65ca8);
+  box-shadow: 0 0 4px rgba(214,92,168,0.6);
+}
+
+/* --- Portfolio Links --- */
+.portfolio {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio a {
+  flex: 1;
+  text-align: center;
+  padding: 0.55rem 0.5rem;
+  border-radius: 12px;
+  background: #f5edf7;
+  color: #7b4f72;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.portfolio a:hover,
+.portfolio a:focus-visible {
+  background: #ffd3ec;
+  color: #a03c78;
+}
+
+/* --- Growth History (concealed) --- */
+.growth-toggle {
+  width: 100%;
+  background: #4a2840;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.growth-toggle:hover,
+.growth-toggle:focus-visible {
+  background: #6b3a5c;
+}
+
+.growth-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.growth-panel.open {
+  max-height: 300px;
+  margin-top: 1rem;
+}
+
+.growth-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.growth-panel th, .growth-panel td {
+  padding: 0.45rem 0.4rem;
+  text-align: left;
+}
+
+.growth-panel thead {
+  background: #ffd3ec;
+}
+
+.growth-panel th {
+  font-family: 'Baloo 2', cursive;
+  color: #a03c78;
+  font-size: 0.72rem;
+}
+
+.growth-panel tbody tr {
+  border-bottom: 1px solid #f5edf7;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.done { background: #d65ca8; }
+.dot.missed { background: #e2cbd9; }
+
+.note {
+  font-size: 0.7rem;
+  color: #9c7393;
+  text-align: center;
+  margin-top: 2rem;
+}
+
